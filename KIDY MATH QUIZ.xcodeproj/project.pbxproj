@@ -12,6 +12,7 @@
 		702CB63722CF855800A31F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702CB63522CF855800A31F5B /* Main.storyboard */; };
 		702CB63922CF855800A31F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702CB63822CF855800A31F5B /* Assets.xcassets */; };
 		702CB63C22CF855800A31F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702CB63A22CF855800A31F5B /* LaunchScreen.storyboard */; };
+		702CB64622D0FEA200A31F5B /* QuizClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702CB64522D0FEA200A31F5B /* QuizClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		702CB63822CF855800A31F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		702CB63B22CF855800A31F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		702CB63D22CF855800A31F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		702CB64522D0FEA200A31F5B /* QuizClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				702CB63122CF855800A31F5B /* AppDelegate.swift */,
+				702CB64522D0FEA200A31F5B /* QuizClass.swift */,
 				702CB63322CF855800A31F5B /* ViewController.swift */,
 				702CB63522CF855800A31F5B /* Main.storyboard */,
-				702CB63822CF855800A31F5B /* Assets.xcassets */,
 				702CB63A22CF855800A31F5B /* LaunchScreen.storyboard */,
+				702CB63822CF855800A31F5B /* Assets.xcassets */,
 				702CB63D22CF855800A31F5B /* Info.plist */,
 			);
 			path = "KIDY MATH QUIZ";
@@ -138,6 +141,7 @@
 			files = (
 				702CB63422CF855800A31F5B /* ViewController.swift in Sources */,
 				702CB63222CF855800A31F5B /* AppDelegate.swift in Sources */,
+				702CB64622D0FEA200A31F5B /* QuizClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,13 +279,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QJJC5FKCF4;
+				DEVELOPMENT_TEAM = YLCT6LX3TD;
 				INFOPLIST_FILE = "KIDY MATH QUIZ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.digilaytech.KIDY-MATH-QUIZ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -290,13 +294,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QJJC5FKCF4;
+				DEVELOPMENT_TEAM = YLCT6LX3TD;
 				INFOPLIST_FILE = "KIDY MATH QUIZ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.digilaytech.KIDY-MATH-QUIZ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
