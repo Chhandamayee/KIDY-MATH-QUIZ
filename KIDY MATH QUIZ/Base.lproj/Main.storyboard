@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Bold</string>
+        </array>
+        <array key="TrebuchetMSBold.ttf">
+            <string>TrebuchetMS-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KIDY_MATH_QUIZ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1U0-0o-5mP">
+                                <rect key="frame" x="0.0" y="144" width="320" height="336"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ySA-bX-yLU">
+                                        <rect key="frame" x="10" y="20" width="300" height="296"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Write Your Answer Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-ua-byL">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="51.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1WQ-yB-NhC"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Z-Mv-2f5">
+                                                <rect key="frame" x="0.0" y="81.5" width="300" height="51.5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="CHECK ANSWER">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="checkAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4H9-Ht-oH2"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANSWER HIDDEN HERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuT-pF-jJb">
+                                                <rect key="frame" x="0.0" y="163" width="300" height="51.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfN-YL-yOf">
+                                                <rect key="frame" x="0.0" y="244.5" width="300" height="51.5"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="3" height="3"/>
+                                                <state key="normal" title="NEXT QUESTION">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aSF-sv-ufC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ySA-bX-yLU" secondAttribute="bottom" constant="20" id="0N9-Uq-VZM"/>
+                                    <constraint firstAttribute="trailing" secondItem="ySA-bX-yLU" secondAttribute="trailing" constant="10" id="kA6-vm-TTu"/>
+                                    <constraint firstItem="ySA-bX-yLU" firstAttribute="leading" secondItem="1U0-0o-5mP" secondAttribute="leading" constant="10" id="kO5-eM-OxE"/>
+                                    <constraint firstItem="ySA-bX-yLU" firstAttribute="top" secondItem="1U0-0o-5mP" secondAttribute="top" constant="20" id="yrc-5t-zHf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMI-3L-cna">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-9x-1r0">
+                                        <rect key="frame" x="5" y="72" width="310" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="2" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhD-ZH-DDV">
+                                        <rect key="frame" x="5" y="72.5" width="310" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="2" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KEEP YOUR PEN AND PAPER READY BEFORE START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPQ-is-eEL">
+                                        <rect key="frame" x="0.0" y="128.5" width="320" height="15.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EqQ-9x-1r0" firstAttribute="leading" secondItem="LMI-3L-cna" secondAttribute="leading" constant="5" id="COL-7c-q2s"/>
+                                    <constraint firstItem="EqQ-9x-1r0" firstAttribute="centerX" secondItem="LMI-3L-cna" secondAttribute="centerX" id="IFe-fs-zPU"/>
+                                    <constraint firstAttribute="bottom" secondItem="VPQ-is-eEL" secondAttribute="bottom" id="VWb-Gw-t70"/>
+                                    <constraint firstItem="VPQ-is-eEL" firstAttribute="leading" secondItem="LMI-3L-cna" secondAttribute="leading" id="W5E-eB-ap7"/>
+                                    <constraint firstItem="VhD-ZH-DDV" firstAttribute="leading" secondItem="LMI-3L-cna" secondAttribute="leading" constant="5" id="bAl-oq-zcf"/>
+                                    <constraint firstItem="VhD-ZH-DDV" firstAttribute="centerX" secondItem="LMI-3L-cna" secondAttribute="centerX" id="bPZ-wi-eOD"/>
+                                    <constraint firstAttribute="trailing" secondItem="EqQ-9x-1r0" secondAttribute="trailing" constant="5" id="e2p-hQ-bSc"/>
+                                    <constraint firstAttribute="trailing" secondItem="VhD-ZH-DDV" secondAttribute="trailing" constant="5" id="iOA-td-ZG2"/>
+                                    <constraint firstAttribute="trailing" secondItem="VPQ-is-eEL" secondAttribute="trailing" id="jYz-zA-7rC"/>
+                                    <constraint firstItem="VhD-ZH-DDV" firstAttribute="centerY" secondItem="LMI-3L-cna" secondAttribute="centerY" id="p8C-OF-aK7"/>
+                                    <constraint firstItem="EqQ-9x-1r0" firstAttribute="centerY" secondItem="LMI-3L-cna" secondAttribute="centerY" id="xct-S5-UuN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LMI-3L-cna" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="95d-QJ-5BH"/>
+                            <constraint firstItem="LMI-3L-cna" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9P1-Sk-Kd3"/>
+                            <constraint firstItem="1U0-0o-5mP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="BVy-AV-ix7"/>
+                            <constraint firstItem="1U0-0o-5mP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="C3A-6P-h1b"/>
+                            <constraint firstItem="LMI-3L-cna" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZLf-kr-z5b"/>
+                            <constraint firstItem="LMI-3L-cna" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cQC-gz-hV1"/>
+                            <constraint firstItem="1U0-0o-5mP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="poH-fN-yty"/>
+                            <constraint firstItem="1U0-0o-5mP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t3f-Ai-APe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="iuT-pF-jJb" id="XmR-FI-F2P"/>
+                        <outlet property="nextQuestionLabel" destination="VhD-ZH-DDV" id="FSO-y9-G56"/>
+                        <outlet property="questionLabel" destination="EqQ-9x-1r0" id="tPo-zu-acF"/>
+                        <outlet property="userAnsewrTextfield" destination="TMe-ua-byL" id="J9K-TE-gqG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="-26"/>
+        </scene>
+    </scenes>
+</document>
