@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZUW-p4-kMD">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GurmukhiMN.ttc">
+            <string>GurmukhiMN-Bold</string>
+        </array>
         <array key="Noteworthy.ttc">
             <string>Noteworthy-Bold</string>
         </array>
@@ -19,10 +22,44 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="03q-wM-iza">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2L9-XS-13O" customClass="StartViewController" customModule="KIDY_MATH_QUIZ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xuU-5Z-do4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UJ-Ia-awo">
+                                <rect key="frame" x="57" y="192" width="206" height="96"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="60"/>
+                                <size key="titleShadowOffset" width="3" height="3"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButton:" destination="2L9-XS-13O" eventType="touchUpInside" id="SXb-Vn-tJQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7UJ-Ia-awo" firstAttribute="centerX" secondItem="xuU-5Z-do4" secondAttribute="centerX" id="FCA-O1-5dR"/>
+                            <constraint firstItem="7UJ-Ia-awo" firstAttribute="centerY" secondItem="xuU-5Z-do4" secondAttribute="centerY" id="e8S-jD-VQf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DLt-SO-sk7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lFR-FE-arc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hG-hX-REd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-502.5" y="-22.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KIDY_MATH_QUIZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="KIDY_MATH_QUIZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +187,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="-26"/>
+            <point key="canvasLocation" x="183.75" y="-26.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D1f-fg-rlw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZUW-p4-kMD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MSe-vl-haX">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2L9-XS-13O" kind="relationship" relationship="rootViewController" id="7bw-rV-pJJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Psq-Z0-bTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1528" y="-26"/>
         </scene>
     </scenes>
 </document>

@@ -146,17 +146,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     @IBOutlet weak var answerLabel: UILabel!
     @IBAction func nextQuestionButton(_ sender: UIButton) {
-        currentQuestionIndex += 1
-        if currentQuestionIndex == quizList.count {
-            currentQuestionIndex = 0
+        if (answerLabel.text == "ANSWER HIDDEN HERE")
+        {
+            let alertController = UIAlertController(title: "CAN'T SKIP", message: "SOLVE THIS QUESTION FIRST", preferredStyle: .alert)
+            
+            // Create the actions
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                UIAlertAction in
+                
+            }
+            // Add the actions
+            alertController.addAction(okAction)
+            // Present the controller
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else
+        {
+            currentQuestionIndex += 1
+            if currentQuestionIndex == quizList.count {
+                currentQuestionIndex = 0
+            }
+            
+            let question: String = quizList[currentQuestionIndex].question
+            nextQuestionLabel.text = question
+            answerLabel.text = "ANSWER HIDDEN HERE"
+            userAnsewrTextfield.text = ""
+            animateLabelTransitions()
         }
         
-        let question: String = quizList[currentQuestionIndex].question
-        nextQuestionLabel.text = question
-        answerLabel.text = "ANSWER HIDDEN HERE"
-        userAnsewrTextfield.text = ""
-        animateLabelTransitions()
     }
+    
     func animateLabelTransitions() {
         // Animate the alpha
         UIView.animate(withDuration: 0.5,

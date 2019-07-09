@@ -13,6 +13,7 @@
 		702CB63922CF855800A31F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702CB63822CF855800A31F5B /* Assets.xcassets */; };
 		702CB63C22CF855800A31F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702CB63A22CF855800A31F5B /* LaunchScreen.storyboard */; };
 		702CB64622D0FEA200A31F5B /* QuizClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702CB64522D0FEA200A31F5B /* QuizClass.swift */; };
+		70810AFE22D4DAD300111F6F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70810AFD22D4DAD300111F6F /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		702CB63B22CF855800A31F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		702CB63D22CF855800A31F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		702CB64522D0FEA200A31F5B /* QuizClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizClass.swift; sourceTree = "<group>"; };
+		70810AFD22D4DAD300111F6F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				702CB63122CF855800A31F5B /* AppDelegate.swift */,
 				702CB64522D0FEA200A31F5B /* QuizClass.swift */,
 				702CB63322CF855800A31F5B /* ViewController.swift */,
+				70810AFD22D4DAD300111F6F /* StartViewController.swift */,
 				702CB63522CF855800A31F5B /* Main.storyboard */,
 				702CB63A22CF855800A31F5B /* LaunchScreen.storyboard */,
 				702CB63822CF855800A31F5B /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				702CB63422CF855800A31F5B /* ViewController.swift in Sources */,
+				70810AFE22D4DAD300111F6F /* StartViewController.swift in Sources */,
 				702CB63222CF855800A31F5B /* AppDelegate.swift in Sources */,
 				702CB64622D0FEA200A31F5B /* QuizClass.swift in Sources */,
 			);
